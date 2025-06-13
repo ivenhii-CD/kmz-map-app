@@ -1,2 +1,8 @@
-<h2>Google Map with Eiffel Tower Marker</h2>
-<div id="map" style="height: 500px;"></div>
+<h2>Malaysia Coverage Map with KMZ Toggle</h2>
+
+<label>
+  <input type="checkbox" [(ngModel)]="showLayer" (change)="toggleKMZ()" />
+  Show Coverage Layer
+</label>
+
+<div id="map" style="height: 500px; margin-top: 10px;"></div>
