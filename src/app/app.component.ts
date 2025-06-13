@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
     });
     
     this.kmzLayer = new google.maps.KmlLayer({
-      url: 'https://ivenhii-cd.github.io/kmz-map-app/westcampus_marker.kmz',
+      url: 'https://ivenhii-cd.github.io/kmz-map-app/westcampus_marker_3.kmz',
       map: this.map,
       preserveViewport: true,
       suppressInfoWindows: false
