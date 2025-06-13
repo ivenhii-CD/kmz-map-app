@@ -22,13 +22,13 @@ export class AppComponent implements OnInit {
       center: { lat: 48.8584, lng: 2.2945 },
   zoom: 15
     });
-
-
+    
     this.kmzLayer = new google.maps.KmlLayer({
-      url: 'https://ivenhii-cd.github.io/kmz-map-app/westcampus-2.kml',
+      url: 'https://ivenhii-cd.github.io/kmz-map-app/westcampus_marker.kmz',
       map: this.map,
       preserveViewport: true,
       suppressInfoWindows: false
     });
+
   }
 }
