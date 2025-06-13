@@ -7,11 +7,9 @@ declare var google: any;
   templateUrl: './app.component.html',
 })
 export class AppComponent implements OnInit {
-  title = 'kmz-map-app'; // ✅ this must be inside the class
-
+  title = 'kmz-map-app';
   map: any;
   kmzLayer: any;
-  showLayer = true;
 
   ngOnInit(): void {
     if (typeof window !== 'undefined') {
@@ -21,19 +19,15 @@ export class AppComponent implements OnInit {
 
   initMap(): void {
     this.map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-      center: { lat: 48.8584, lng: 2.2945 }, // Eiffel Tower
+      center: { lat: 48.8584, lng: 2.2945 },
       zoom: 15
     });
 
     this.kmzLayer = new google.maps.KmlLayer({
-      url: window.location.origin + '/assets/kml/sample_eiffel_marker.kml',
+      url: 'https://ivenhii-cd.github.io/kmz-map-app/sample_eiffel_marker.kml',
       map: this.map,
-      preserveViewport: true
+      preserveViewport: true,
+      suppressInfoWindows: false
     });
-
-  }
-
-  toggleKMZ(): void {
-    this.kmzLayer.setMap(this.showLayer ? this.map : null);
   }
 }
