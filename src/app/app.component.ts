@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
 
   initMap(): void {
     this.map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
-      center: { lat: 37.422, lng: -122.084 }, // Google HQ area
-      zoom: 16
+      center: { lat: 48.8584, lng: 2.2945 },
+  zoom: 15
     });
 
 

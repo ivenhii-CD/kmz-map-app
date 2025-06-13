@@ -14,7 +14,7 @@
       </BalloonStyle>
     </Style>
     <Placemark>
-      <name>Eiffel Tower</name>
+      <name>Google West Campus 1</name>
       <styleUrl>#west_campus_style</styleUrl>
       <ExtendedData>
         <Data name="video">
@@ -27,6 +27,33 @@
         <coordinates>2.2945,48.8584,0</coordinates>
       </Point>
     </Placemark>
-    
+    <Placemark>
+      <name>Google West Campus 2</name>
+      <styleUrl>#west_campus_style</styleUrl>
+      <ExtendedData>
+        <Data name="video">
+          <value><![CDATA[<iframe width="480" height="360"
+            src="https://www.youtube.com/embed/nb4gvrNrDWw" frameborder="0"
+            allowfullscreen></iframe><br><br>]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>2.2945,48.8584,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Google West Campus 3</name>
+      <styleUrl>#west_campus_style</styleUrl>
+      <ExtendedData>
+        <Data name="video">
+          <value><![CDATA[<iframe width="480" height="360"
+            src="https://www.youtube.com/embed/0hhiEjf7_NA" frameborder="0"
+            allowfullscreen></iframe><br><br>]]></value>
+        </Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>2.2945,48.8584,0</coordinates>
+      </Point>
+    </Placemark>
   </Document>
 </kml>
