@@ -1,8 +1,20 @@
-<h2>Malaysia Coverage Map with KMZ Toggle</h2>
+<div>
+  <input id="search-input" type="text" placeholder="Search location" />
 
-<label>
-  <input type="checkbox" [(ngModel)]="showLayer" (change)="toggleKMZ()" />
-  Show Coverage Layer
-</label>
+  <div style="margin-top: 10px;">
+    <button (click)="setTab('celcom')" [disabled]="activeTab === 'celcom'">Celcom</button>
+    <button (click)="setTab('digi')" [disabled]="activeTab === 'digi'">Digi</button>
+  </div>
 
-<div id="map" style="height: 500px; margin-top: 10px;"></div>
+  <div *ngIf="activeTab === 'celcom'" style="margin-top: 10px;">
+    <label><input type="checkbox" [checked]="showCelcomLayer1" (change)="toggleLayer('celcomLayer1')" /> Celcom LTE</label><br />
+    <label><input type="checkbox" [checked]="showCelcomLayer2" (change)="toggleLayer('celcomLayer2')" /> Celcom 5G</label>
+  </div>
+
+  <div *ngIf="activeTab === 'digi'" style="margin-top: 10px;">
+    <label><input type="checkbox" [checked]="showDigiLayer1" (change)="toggleLayer('digiLayer1')" /> Digi LTE</label><br />
+    <label><input type="checkbox" [checked]="showDigiLayer2" (change)="toggleLayer('digiLayer2')" /> Digi 5G</label>
+  </div>
+
+  <div id="map" style="height: 600px; width: 100%; margin-top: 10px;"></div>
+</div>
